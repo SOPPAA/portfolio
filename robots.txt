@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ideasportpattani.pages.dev/sitemap.xml
