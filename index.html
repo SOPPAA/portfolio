@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IDEA SPORT Pattani — เสื้อพิมพ์ลาย & พิมพ์ผ้า</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   1) สี / ธีม  — แก้สีได้ที่นี่ (สว่าง = ค่าเริ่มต้น, มืด = data-theme="dark")
+   ===================================================================== */
+:root{
+  --mint:#BDD3A7; --dark:#123F1B; --cream:#E8EDD6; --matcha:#90AD2E;      /* สีแบรนด์ */
+  --bg:#E8EDD6; --card:#F6F8EC; --tx:#123F1B; --mu:#4f6552; --ln:#cbd6b0;  /* โหมดสว่าง (ครีม) */
+  --hero-bg:#BDD3A7; --hero-tx:#123F1B; --hero-mu:#2f5233;
+  --btn-bg:#123F1B; --btn-tx:#E8EDD6; --accent:#6f8a1c;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="dark"]{                                                  /* โหมดมืด */
+  --bg:#0d1f11; --card:#14301a; --tx:#E8EDD6; --mu:#a9b9a3; --ln:#25472b;
+  --hero-bg:#123F1B; --hero-tx:#E8EDD6; --hero-mu:#cfd9bd;
+  --btn-bg:#BDD3A7; --btn-tx:#123F1B; --accent:#90AD2E}
+
+/* =====================================================================
+   2) พื้นฐาน
+   ===================================================================== */
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:Prompt,"Noto Sans Thai",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;transition:background .3s,color .3s}
+img{max-width:100%;display:block}a{color:inherit}[hidden]{display:none!important}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}.alt{background:var(--card);border-block:1px solid var(--ln)}
+h2{font-size:clamp(24px,3.5vw,34px);margin:6px 0 8px;font-weight:600;line-height:1.3}
+.eye{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.sub{color:var(--mu);margin:0 0 30px;max-width:560px}
+.btn{display:inline-block;padding:11px 22px;border-radius:99px;background:var(--btn-bg);color:var(--btn-tx);text-decoration:none;font-weight:500;font-size:14px;border:1px solid var(--btn-bg);cursor:pointer;font-family:inherit}
+.btn.o{background:transparent;color:var(--tx);border-color:var(--tx)}
+
+/* =====================================================================
+   3) HEADER (เมนูอยู่กึ่งกลาง)
+   ===================================================================== */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;min-height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:15px}.brand img{height:38px}
+.menu{display:flex;gap:26px;font-size:14px;justify-content:center}.menu a{text-decoration:none;color:var(--mu);padding:4px 0;border-bottom:2px solid transparent}.menu a:hover{color:var(--tx);border-color:var(--accent)}
+.tools{justify-self:end;display:flex;gap:10px;align-items:center}
+#theme{width:38px;height:38px;border-radius:50%;border:1px solid var(--ln);background:var(--card);color:var(--tx);font-size:17px;cursor:pointer}
+@media(max-width:760px){nav{grid-template-columns:1fr auto;padding-bottom:8px}.menu{grid-column:1/-1;order:3;gap:16px;font-size:13px;overflow-x:auto}.tools .btn{display:none}}
+
+/* =====================================================================
+   4) HERO + โปสเตอร์ 3 ใบซ้อนกัน
+   ===================================================================== */
+.hero{background:var(--hero-bg);color:var(--hero-tx)}
+.hero .w{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding-top:50px;padding-bottom:56px}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.2;margin:10px 0 14px;font-weight:600}
+.hero em{font-style:normal;color:var(--accent)}.hero .eye{color:var(--hero-mu)}
+.hero p{color:var(--hero-mu);max-width:460px;margin:0 0 24px}
+.stats{display:flex;gap:26px;margin-top:28px;font-size:13px;color:var(--hero-mu);flex-wrap:wrap}.stats b{display:block;font-size:18px;color:var(--hero-tx)}
+.stack{position:relative;width:100%;max-width:500px;aspect-ratio:1/1;margin:auto}
+.stack figure{position:absolute;width:62%;aspect-ratio:1/1;margin:0;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px #0004;cursor:zoom-in;transition:transform .3s;border:3px solid var(--card)}
+.stack img{width:100%;height:100%;object-fit:cover}
+.stack figure:nth-child(1){left:0;top:10%;transform:rotate(-7deg);z-index:1}
+.stack figure:nth-child(2){right:0;top:0;transform:rotate(6deg);z-index:2}
+.stack figure:nth-child(3){left:19%;bottom:0;transform:rotate(-1deg);z-index:3}
+.stack figure:hover{z-index:5;transform:scale(1.05) rotate(0)}
+@media(max-width:800px){.hero .w{grid-template-columns:1fr}}
+
+/* =====================================================================
+   5) การ์ด / ชิป / ตาราง / ขั้นตอน
+   ===================================================================== */
+.g{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:700px){.g2{grid-template-columns:1fr}}.g3{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.c{background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:22px}.alt .c{background:var(--bg)}
+.c h3{margin:0 0 6px;font-size:17px;font-weight:600}.c p{margin:0;color:var(--mu);font-size:14px}.n{font-size:12px;color:var(--accent);font-weight:600;letter-spacing:.1em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chip{padding:7px 15px;border-radius:99px;background:var(--bg);border:1px solid var(--ln);font-size:14px}.alt .chip{background:var(--card)}
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}@media(max-width:800px){.pr{grid-template-columns:1fr}}
+.ov{overflow-x:auto;border:1px solid var(--ln);border-radius:16px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:14px;text-align:center}
+th,td{padding:11px 10px;border-bottom:1px solid var(--ln)}th{background:var(--dark);color:var(--cream);font-weight:500}
+td:first-child,th:first-child{text-align:left;padding-left:16px;font-weight:500}tr:last-child td{border:0}td b{color:var(--accent)}
+.note{font-size:13px;color:var(--mu);margin-top:12px}
+.steps{counter-reset:s}.steps .c{position:relative;padding-top:52px}
+.steps .c:before{counter-increment:s;content:counter(s);position:absolute;top:16px;left:22px;width:26px;height:26px;border-radius:50%;background:var(--matcha);color:var(--dark);font-weight:600;font-size:13px;display:grid;place-items:center}
+
+/* =====================================================================
+   6) แกลเลอรี่ (รูปผลงาน + หน้าแกลเลอรี่เฉพาะ)
+   ===================================================================== */
+.gal{columns:3 240px;column-gap:16px}
+.gal button{display:block;width:100%;margin:0 0 16px;padding:0;border:1px solid var(--ln);border-radius:16px;overflow:hidden;background:var(--card);cursor:zoom-in;text-align:left;font:inherit;color:inherit;break-inside:avoid}
+.gal span{display:block;padding:10px 14px;font-size:13px;color:var(--mu)}
+.tabs{display:inline-flex;gap:4px;padding:4px;border-radius:99px;background:var(--card);border:1px solid var(--ln);margin:6px 0 30px;flex-wrap:wrap}
+.tabs button{border:0;background:transparent;color:var(--mu);padding:9px 20px;border-radius:99px;font:500 14px Prompt,sans-serif;cursor:pointer}
+.tabs button.on{background:var(--btn-bg);color:var(--btn-tx)}
+.cat{margin-bottom:40px}.cat h3{font-size:18px;margin:0 0 14px;display:flex;align-items:center;gap:10px}.cat h3 small{font-size:12px;color:var(--mu);font-weight:400}
+.empty{color:var(--mu);font-size:14px;border:1px dashed var(--ln);border-radius:14px;padding:16px}
+.lb{position:fixed;inset:0;background:#000d;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}.lb.on{display:flex}.lb img{max-height:92vh;border-radius:10px}
+
+/* =====================================================================
+   7) แผนที่ + ติดต่อ + footer
+   ===================================================================== */
+.map{position:relative;height:340px;border-radius:24px;overflow:hidden;border:1px solid var(--ln);background:var(--mint)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .box{position:absolute;left:20px;bottom:20px;right:20px;max-width:380px;background:var(--card);border:1px solid var(--ln);border-radius:18px;padding:18px 20px;box-shadow:0 10px 30px #0003}
+.map .box h3{margin:0 0 4px;font-size:17px}.map .box p{margin:0 0 12px;font-size:14px;color:var(--mu)}
+.ct{background:var(--dark);color:var(--cream);border-radius:26px;padding:40px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+@media(max-width:760px){.ct{grid-template-columns:1fr;padding:28px}}
+.ct .eye{color:var(--matcha)}.ct h2{margin-top:0}.ct p{color:#cfd9bd;margin:0 0 14px}
+.ct a.r{display:flex;gap:10px;align-items:center;text-decoration:none;padding:10px 0;border-bottom:1px solid #2c5233}.ct small{color:var(--matcha);min-width:64px}
+.qr{background:#fff;border-radius:16px;padding:14px;text-align:center;color:#222;font-size:13px;width:160px;margin:auto}.qr img{width:100%;image-rendering:pixelated}
+footer{padding:26px 0;text-align:center;font-size:13px;color:var(--mu)}
+</style></head>
+<body>
+<!-- =============== HEADER =============== -->
+<header><div class="w"><nav>
+  <a class="brand" href="#top"><img src="images/logo.png" alt="IDEA SPORT"><span>IDEA SPORT</span></a>
+  <div class="menu"><a href="#svc">บริการ</a><a href="#spec">แบบ &amp; ผ้า</a><a href="#price">ราคา</a><a href="#work">ผลงาน</a><a href="#gallery">แกลเลอรี่</a></div>
+  <div class="tools"><button id="theme" aria-label="สลับโหมดสว่าง/มืด" title="สว่าง / มืด">☾</button><a class="btn" href="#contact">สั่งทำ</a></div>
+</nav></div></header>
+
+<!-- ===================== หน้าหลัก ===================== -->
+<main id="home">
+
+<!-- ===== 1. HERO (โปสเตอร์ 3 ใบ: เปลี่ยนรูปที่ images/hero-1.jpg, hero-2.jpg, hero-3.jpg) ===== -->
+<div class="hero"><div class="w"><div>
+  <div class="eye">IDEA SPORT · Pattani</div>
+  <h1>Your Style.<br>Your Team.<br><em>Your Identity.</em></h1>
+  <p>รับผลิตเสื้อพิมพ์ลายออกแบบตรงตามต้องการ และรับพิมพ์ลายผ้าทุกงาน ตั้งแต่ธงโบกถึงป้ายผ้างานแต่ง</p>
+  <a class="btn" href="#gallery">ดูแกลเลอรี่</a> <a class="btn o" href="#price">ดูราคา</a>
+  <div class="stats"><div><b>10 ตัว+</b>ออกแบบฟรี</div><div><b>Sublimation</b>สีคมชัด ไม่ลอกง่าย</div><div><b>ใส่ได้ตามใจ</b>โลโก้ ข้อความ สปอนเซอร์</div></div>
+</div>
+<div class="stack" id="hero"></div></div></div>
+
+<!-- ===== 2. บริการ ===== -->
+<section id="svc"><div class="w"><div class="eye">Services</div><h2>งานพิมพ์ที่เราทำให้ได้</h2><p class="sub">เริ่มจากเสื้อทีม ไปจนถึงงานผ้าขนาดใหญ่ บอกไอเดียมา เราช่วยออกแบบให้</p>
+<div class="g g2">
+  <div class="c"><span class="n">01</span><h3>เสื้อพิมพ์ลาย</h3><p>เสื้อทีมกีฬา องค์กร โรงเรียน ตาดีกา ออกแบบเองได้ทั้งตัว ใส่โลโก้ ชื่อ เบอร์ และสปอนเซอร์ได้ตามต้องการ</p></div>
+  <div class="c"><span class="n">02</span><h3>พิมพ์ลายผ้า</h3><p>ธงโบก ป้ายผ้างานแต่ง ป้ายผ้าหน้าร้าน และงานผ้าอื่นๆ สีสดคมชัด สอบถามขนาดและราคาได้ทางแชท</p></div></div>
+<div class="eye" style="margin-top:28px">เหมาะสำหรับ</div><div class="chips" id="groups"></div>
+</div></section>
+
+<!-- ===== 3. แบบ & ผ้า (รายการแก้ที่ CONFIG ด้านล่าง) ===== -->
+<section id="spec" class="alt"><div class="w"><div class="eye">Style · Collar · Fabric</div><h2>เลือกสไตล์ แบบคอ และชนิดผ้า</h2><p class="sub">ไม่แน่ใจเลือกอะไร ทักมาปรึกษาได้เลย</p>
+<div class="g g2">
+  <div class="c"><h3>สไตล์การออกแบบ</h3><div class="chips" id="c-style"></div></div>
+  <div class="c"><h3>ประเภทคอเสื้อ</h3><div class="chips" id="c-collar"></div></div>
+  <div class="c" style="grid-column:1/-1"><h3>ชนิดผ้า</h3><div class="chips" id="c-fabric"></div><p style="margin-top:14px">เนื้อผ้าพรีเมียม ใส่สบาย ระบายความร้อนได้ดี สีคมชัด ไม่ลอกง่าย</p></div>
+</div></div></section>
+
+<!-- ===== 4. ราคา (ตารางแก้ที่ CONFIG.PRICES) ===== -->
+<section id="price"><div class="w"><div class="eye">Pricing</div><h2>ราคาเสื้อพิมพ์ลาย Sublimation</h2><p class="sub">ราคาต่อตัว (บาท) ยิ่งสั่งมาก ยิ่งถูก</p>
+<div class="pr"><div><div class="ov"><table id="ptable"></table></div>
+<p class="note">• แขนยาว +20 บาท/ตัว<br>• ออกแบบฟรี เมื่อสั่ง 10 ตัวขึ้นไป<br>• ราคาพิมพ์ผ้าธง/ป้ายผ้า ขึ้นกับขนาดและงาน ทักสอบถามได้</p></div>
+<button class="c" style="padding:0;overflow:hidden;cursor:zoom-in" onclick="openLb('images/price-list.jpg')"><img src="images/price-list.jpg" alt="ใบราคาเสื้อพิมพ์ลาย"></button></div>
+</div></section>
+
+<!-- ===== 5. ผลงาน (ตัวอย่างย่อ — เต็มอยู่หน้าแกลเลอรี่) ===== -->
+<section id="work" class="alt"><div class="w"><div class="eye">Portfolio</div><h2>ตัวอย่างผลงาน</h2><p class="sub">แตะที่รูปเพื่อดูขยาย</p><div class="gal" id="gal-home"></div>
+<p style="margin-top:20px"><a class="btn" href="#gallery">ดูแกลเลอรี่ทั้งหมด →</a></p></div></section>
+
+<!-- ===== 6. ขั้นตอนสั่งทำ ===== -->
+<section><div class="w"><div class="eye">How to order</div><h2>สั่งง่ายใน 4 ขั้นตอน</h2><p class="sub">&nbsp;</p>
+<div class="g g3 steps">
+  <div class="c"><h3>บอกไอเดีย</h3><p>ส่งโลโก้ สไตล์ สีที่ชอบ จำนวน ผ่าน Line / Facebook</p></div>
+  <div class="c"><h3>ออกแบบ</h3><p>ทีมงานออกแบบให้ พร้อมแก้ไขจนพอใจ</p></div>
+  <div class="c"><h3>ยืนยันแบบ &amp; ไซส์</h3><p>เช็กรายชื่อ เบอร์ ไซส์ ตามตารางไซส์</p></div>
+  <div class="c"><h3>ผลิต &amp; รับงาน</h3><p>พิมพ์ด้วยเครื่อง Epson สีสด ติดทนนาน</p></div></div></div></section>
+
+<!-- ===== 7. แผนที่ (ลิงก์/ที่อยู่แก้ที่ CONFIG.MAP) ===== -->
+<section id="map" class="alt"><div class="w"><div class="eye">Location</div><h2>แวะมาที่ร้านได้</h2><p class="sub">กดปุ่มเพื่อเปิดแผนที่และนำทาง</p>
+<div class="map">
+  <svg viewBox="0 0 800 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect width="800" height="340" fill="var(--mint)" opacity=".55"/>
+    <g stroke="var(--card)" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90 C200 70 300 180 520 150 S760 60 820 90"/><path d="M180 -10 C200 120 330 200 360 350"/><path d="M560 -10 C540 100 640 220 700 350"/></g>
+    <g stroke="var(--card)" stroke-width="5" fill="none" opacity=".8"><path d="M-10 250 L820 230"/><path d="M420 -10 L450 350"/><path d="M60 -10 L90 350"/></g>
+    <g transform="translate(560 120)"><circle cy="46" rx="18" r="12" fill="#0003"/><path d="M0 44C-26 8 -22 -26 0 -26 22 -26 26 8 0 44Z" fill="var(--dark)"/><circle cy="-6" r="9" fill="var(--mint)"/></g>
+    <img id="mapimg" alt="แผนที่ร้าน IDEA SPORT" hidden style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" onerror="this.hidden=true;document.querySelector('.map svg').hidden=false">
+  </svg>
+  <div class="box"><h3>IDEA SPORT Pattani</h3><p id="addr"></p><a class="btn" id="mapbtn" target="_blank" rel="noopener" href="#">เปิดแมพ ↗</a></div>
+</div></div></section>
+
+<!-- ===== 8. ติดต่อ ===== -->
+<section id="contact"><div class="w"><div class="ct"><div>
+  <div class="eye">Contact</div><h2>ทักมาคุยไอเดียได้เลย</h2><p>สอบถามทาง INBOX ยินดีให้บริการค่ะ</p><div id="clist"></div></div>
+  <div class="qr"><img src="images/qr.png" alt="QR ติดต่อ"><div>สแกนเพื่อติดต่อ</div></div></div></div></section>
+</main>
+
+<!-- ===================== หน้าแกลเลอรี่ (#gallery) ===================== -->
+<main id="gallery" hidden><section><div class="w">
+  <div class="eye">Gallery</div><h2>แกลเลอรี่ผลงาน</h2><p class="sub">เลือกดูตามประเภทคอ สไตล์งาน หรือชนิดผ้า</p>
+  <div class="tabs" id="tabs"></div><div id="gbody"></div>
+</div></section></main>
+
+<footer><div class="w"><img src="images/design-logo.png" alt="" style="height:54px;margin:0 auto 10px">© IDEA SPORT Pattani · ไอเดียสปอร์ต ปัตตานี</div></footer>
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><img id="lbi" alt=""></div>
+
+<script>
+/* =====================================================================
+   A) CONFIG — ส่วนที่ต้องแก้บ่อยอยู่ตรงนี้ทั้งหมด
+   ===================================================================== */
+var CONFIG={
+  /* ติดต่อ */
+  PHONES:["063 073 4412","095 438 2679"],
+  LINE_ID:"ideasport2018",
+  FB_PAGE:"https://www.facebook.com/IDEASPORT2018",        // เพจร้าน
+  FB_PERSONAL:"https://www.facebook.com/idea.sport.338",   // เฟซส่วนตัว
+
+  /* แผนที่: ใส่ลิงก์ Google Maps ของร้านจริง (ค้นหาร้านใน Google Maps > แชร์ > คัดลอกลิงก์) */
+  MAP_URL:"https://www.google.com/maps/search/?api=1&query=IDEA+SPORT+Pattani",
+  ADDRESS:"22 19-20 ม.10 ถ.รามโกมุท ตำบล บานา อำเภอเมืองปัตตานี ปัตตานี 94000",
+  MAP_IMG:"images/map.jpg",   // ภาพแผนที่ ถ้าไม่ใส่/ไม่มีไฟล์ จะใช้ภาพประกอบเดิมแทน
+
+  /* รูปโปสเตอร์หน้าแรก 3 ใบ (ซ้าย / ขวา / หน้าสุด) */
+  HERO:["images/hero-1.jpg","images/hero-2.jpg","images/hero-3.jpg"],
+
+  /* กลุ่มลูกค้า */
+  GROUPS:["ทีมฟุตบอล","ทีมองค์กร","กลุ่มเยาวชน","ตาดีกา","โรงเรียน (ชุดพละ)","งานแต่ง","ร้านค้า"],
+
+  /* หมวดหมู่ — ชื่อต้องตรงกับที่ใช้ใน WORKS ด้านล่าง */
+  COLLARS:["คอกลม","คอวี","คอปก","คอจีน","คอปกวินเทจ","คอวีปก","คอวี Muslimah","อื่นๆ"],
+  STYLES:["กึ่งทางการ","กีฬา","วินเทจ","มลายู","อิสลามิก","แคมป์ปิ้ง","ธง / ป้ายผ้า","กลุ่มเพื่อน"],
+  FABRICS:["ไมโครเรียบ","เม็ดข้าวสาร","เม็ดข้าวโพด","จุติ","ริ้วเงา","หกเหลี่ยม/รังผึ้ง","ผ้าลูกกอล์ฟ","ผ้าสายฟ้า (เสื้อพละ)","ผ้าวอร์ม (กางเกงพละ)","อื่นๆ"],
+
+  /* ตารางราคา: [แบบเสื้อ, 10, 20, 30, 50, 100 ตัว] */
+  PRICE_HEAD:["แบบเสื้อ","10 ตัว","20","30","50","100"],
+  PRICES:[["คอกลม",220,210,200,190,180],["คอวี",220,210,200,190,180],["คอจีน",250,240,230,220,200],
+          ["คอวีปก",250,240,230,220,200],["คอปก",270,260,250,240,220],["Muslimah",270,260,250,240,220]],
+
+  /* ผลงาน — เพิ่มรูปใหม่: วางไฟล์ใน images/ แล้วเพิ่ม 1 บรรทัดข้างล่าง
+     collar / style / fabric ใส่ได้ทั้งข้อความเดียวหรือหลายค่า เช่น ["คอกลม","คอวี"]
+     (ไม่ใส่ก็ได้ — รูปจะไม่ขึ้นในหมวดนั้น) */
+  WORKS:[
+    {src:"images/work-01.jpg",title:"ชุดฟุตบอล PERWIRA",collar:"คอวี",style:"กีฬา"},
+    {src:"images/work-02.jpg",title:"รวมตัวอย่างงาน หลายสไตล์",collar:"คอปก",style:"ทีม"}
+    // ตัวอย่าง: {src:"images/work-03.jpg",title:"ธงโบกทีมเยาวชน",style:"ธง / ป้ายผ้า"},
+  ],
+  SHOW_EMPTY:false   // true = แสดงหมวดที่ยังไม่มีรูป (ไว้ดูว่าหมวดไหนยังว่าง)
+};
+
+/* =====================================================================
+   B) โค้ดทำงาน — ปกติไม่ต้องแก้
+   ===================================================================== */
+var $=function(i){return document.getElementById(i)};
+function openLb(s){$("lbi").src=s;$("lb").classList.add("on")}
+function chips(id,arr){$(id).innerHTML=arr.map(function(t){return '<span class="chip">'+t+'</span>'}).join("")}
+
+/* --- ธีมสว่าง/มืด (ค่าเริ่มต้น = สว่าง) --- */
+function setTheme(t){document.documentElement.dataset.theme=t;$("theme").textContent=t==="dark"?"☀":"☾";try{localStorage.setItem("theme",t)}catch(e){}}
+var saved="light";try{saved=localStorage.getItem("theme")||"light"}catch(e){}
+setTheme(saved);
+$("theme").onclick=function(){setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark")};
+
+/* --- เติมข้อมูลหน้าหลัก --- */
+$("hero").innerHTML=CONFIG.HERO.map(function(s){return '<figure onclick="openLb(\''+s+'\')"><img src="'+s+'" alt="ตัวอย่างโปสเตอร์งานออกแบบ"></figure>'}).join("");
+chips("groups",CONFIG.GROUPS);chips("c-style",CONFIG.STYLES);chips("c-collar",CONFIG.COLLARS);chips("c-fabric",CONFIG.FABRICS);
+$("ptable").innerHTML="<thead><tr>"+CONFIG.PRICE_HEAD.map(function(h){return"<th>"+h+"</th>"}).join("")+"</tr></thead><tbody>"+
+  CONFIG.PRICES.map(function(r){return"<tr>"+r.map(function(v,i){return"<td>"+(i===1?"<b>"+v+"</b>":v)+"</td>"}).join("")+"</tr>"}).join("")+"</tbody>";
+$("addr").textContent=CONFIG.ADDRESS;$("mapbtn").href=CONFIG.MAP_URL;
+if(CONFIG.MAP_IMG){$("mapimg").src=CONFIG.MAP_IMG;$("mapimg").hidden=false;document.querySelector(".map svg").hidden=true}
+$("clist").innerHTML=CONFIG.PHONES.map(function(p){return'<a class="r" href="tel:'+p.replace(/\s/g,"")+'"><small>โทร</small>'+p+'</a>'}).join("")+
+  '<a class="r" target="_blank" rel="noopener" href="https://line.me/ti/p/~'+CONFIG.LINE_ID+'"><small>Line</small>'+CONFIG.LINE_ID+'</a>'+
+  '<a class="r" target="_blank" rel="noopener" href="'+CONFIG.FB_PAGE+'"><small>เพจ FB</small>Idea Sport</a>'+
+  '<a class="r" target="_blank" rel="noopener" href="'+CONFIG.FB_PERSONAL+'"><small>FB ส่วนตัว</small>Idea Sport</a>';
+
+/* --- การ์ดรูปผลงาน --- */
+function card(w){return'<button onclick="openLb(\''+w.src+'\')"><img loading="lazy" src="'+w.src+'" alt="'+w.title+'"><span>'+w.title+'</span></button>'}
+$("gal-home").innerHTML=CONFIG.WORKS.slice(0,6).map(card).join("");
+
+/* --- หน้าแกลเลอรี่: 3 แท็บ (ตามประเภทคอ / สไตล์ / ชนิดผ้า) --- */
+var TABS=[{k:"collar",t:"ตามประเภทคอ",list:CONFIG.COLLARS},{k:"style",t:"ตามสไตล์งาน",list:CONFIG.STYLES},{k:"fabric",t:"ชนิดผ้า",list:CONFIG.FABRICS}];
+function showTab(i){
+  $("tabs").innerHTML=TABS.map(function(t,j){return'<button class="'+(i===j?"on":"")+'" onclick="showTab('+j+')">'+t.t+'</button>'}).join("");
+  var tab=TABS[i],html="";
+  tab.list.forEach(function(cat){
+    var items=CONFIG.WORKS.filter(function(w){return[].concat(w[tab.k]||[]).indexOf(cat)>-1});
+    if(!items.length&&!CONFIG.SHOW_EMPTY)return;
+    html+='<div class="cat"><h3>'+cat+'<small>'+items.length+' ผลงาน</small></h3>'+(items.length?'<div class="gal">'+items.map(card).join("")+'</div>':'<div class="empty">ยังไม่มีรูปในหมวดนี้</div>')+'</div>';
+  });
+  $("gbody").innerHTML=html||'<div class="empty">ยังไม่มีผลงานในหมวดนี้ — เพิ่มได้ที่ CONFIG.WORKS</div>';
+}
+showTab(0);
+
+/* --- สลับหน้า หน้าหลัก <-> แกลเลอรี่ ด้วย #gallery / #svc ฯลฯ --- */
+function route(){
+  var h=location.hash.slice(1),isG=h==="gallery";
+  $("home").hidden=isG;$("gallery").hidden=!isG;
+  if(isG||!h||h==="top"){scrollTo(0,0)}else{var t=$(h);if(t)t.scrollIntoView()}
+}
+addEventListener("hashchange",route);route();
+</script>
+</body></html>
