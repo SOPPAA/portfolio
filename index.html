@@ -264,6 +264,7 @@ footer{padding:26px 0;text-align:center;font-size:13px;color:var(--mu)}
 <footer><div class="w"><img src="images/design-logo.png" alt="" style="height:54px;margin:0 auto 10px">© IDEA SPORT Pattani · ไอเดียสปอร์ต ปัตตานี</div></footer>
 <div class="lb" id="lb" onclick="this.classList.remove('on')"><img id="lbi" alt=""></div>
 
+<script src="works.js"></script>
 <script>
 /* =====================================================================
    A) CONFIG — ส่วนที่ต้องแก้บ่อยอยู่ตรงนี้ทั้งหมด
@@ -298,28 +299,8 @@ var CONFIG={
   PRICES:[["คอกลม",220,210,200,190,180],["คอวี",220,210,200,190,180],["คอจีน",250,240,230,220,200],
           ["คอวีปก",250,240,230,220,200],["คอปก",270,260,250,240,220],["Muslimah",270,260,250,240,220]],
 
-  /* ผลงาน — เพิ่มรูปใหม่: วางไฟล์ใน images/ แล้วเพิ่ม 1 บรรทัดข้างล่าง
-     collar / style / fabric ใส่ได้ทั้งข้อความเดียวหรือหลายค่า เช่น ["คอกลม","คอวี"]
-     (ไม่ใส่ก็ได้ — รูปจะไม่ขึ้นในหมวดนั้น) */
-  WORKS:[
-    /* หมวดหมู่ — ตัวอย่างเสื้อ */
-    {src:"images/work-01.jpg",title:"ชุดฟุตบอล PERWIRA · แขนสโลป",collar:"คอวี",style:"กีฬา"},
-    {src:"images/work-02.jpg",title:"เสื้อเพื่อนรวมทีม · แขนสโลป",collar:"คอปก",style:"กลุ่มเพื่อน"},
-    {src:"images/work-03.jpg",title:"เสื้อทีมธกส.ปัตตานี",collar:"คอปก",style:"องค์กร"},
-    {src:"images/work-04.jpg",title:"ทีมฟุตบอล กรมทหารราบที่ 153",collar:"คอกลม",style:"กีฬา"},
-    {src:"images/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม·แขนยาว",style:"แคมป์ปิ้ง"},
-    /* หมวดหมู่ — ชนิดผ้า */
-    {src:"images/fabrics/1-01.jpg",title:"ผ้าไมโครเรียบ",fabric:"ไมโครเรียบ"},
-    {src:"images/fabrics/1-02.jpg",title:"ผ้าเม็ดข้าวโพด",fabric:"เม็ดข้าวโพด"},
-    {src:"images/fabrics/1-03.jpg",title:"ผ้ารังผึ่ง/หกเหลี่ยม",fabric:"หกเหลี่ยม/รังผึ้ง"},
-    {src:"images/fabrics/1-04.jpg",title:"ผ้าลูกกอล์ฟ",fabric:"ลูกกอล์ฟ"},
-    {src:"images/fabrics/1-05.jpg",title:"ผ้าจุติไมโคร",fabric:"จุติไมโคร"},
-    {src:"images/fabrics/1-06.jpg",title:"ผ้าดาวกระจาย",fabric:"ดาวกระจาย"},
-    {src:"images/fabrics/1-07.jpg",title:"ผ้าเม็ดข้าวสาร",fabric:"เม็ดข้าวสาร"},
-    {src:"images/fabrics/1-08.jpg",title:"ผ้าตาราง",fabric:"ผ้าตาราง"},
-    {src:"images/fabrics/1-09.jpg",title:"ผ้าริ้วเงา",fabric:"ริ้วเงา"},
-    // ตัวอย่าง: {src:"images/work-03.jpg",title:"ธงโบกทีมเยาวชน",style:"ธง / ป้ายผ้า"},
-  ],
+  /* ผลงาน: รายการรูปอยู่ในไฟล์ works.js (แก้ที่นั่นเมื่อต้องการเพิ่มรูป) */
+  WORKS:(typeof WORKS!=="undefined"?WORKS:[]),
   SHOW_EMPTY:false   // true = แสดงหมวดที่ยังไม่มีรูป (ไว้ดูว่าหมวดไหนยังว่าง)
 };
 
