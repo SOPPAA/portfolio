@@ -143,8 +143,9 @@ td:first-child,th:first-child{text-align:left;padding-left:16px;font-weight:500}
 /* =====================================================================
    6) แกลเลอรี่ (รูปผลงาน + หน้าแกลเลอรี่เฉพาะ)
    ===================================================================== */
-.gal{columns:3 240px;column-gap:16px}
-.gal button{display:block;width:100%;margin:0 0 16px;padding:0;border:1px solid var(--ln);border-radius:16px;overflow:hidden;background:var(--card);cursor:zoom-in;text-align:left;font:inherit;color:inherit;break-inside:avoid}
+/* แกลเลอรี่: ใช้ CSS grid 3 คอลัมน์เสมอ (เดิมใช้ columns:3 240px ซึ่งบนจอแคบเบราว์เซอร์จะลดเหลือ 1-2 คอลัมน์เองจนรูปเรียงแถวละรูป) */
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.gal button{display:block;width:100%;min-width:0;margin:0;padding:0;border:1px solid var(--ln);border-radius:16px;overflow:hidden;background:var(--card);cursor:zoom-in;text-align:left;font:inherit;color:inherit;}
 .gal span{display:block;padding:10px 14px;font-size:13px;color:var(--mu)}
 .tabs{display:flex;gap:8px;margin:6px 0 30px;flex-wrap:wrap}
 .tabs button{border:1px solid var(--ln);background:var(--card);color:var(--mu);padding:8px 20px;border-radius:99px;font:500 14px Prompt,sans-serif;cursor:pointer;transition:background .2s,color .2s}
@@ -153,8 +154,8 @@ td:first-child,th:first-child{text-align:left;padding-left:16px;font-weight:500}
 .cat{margin-bottom:40px}.cat h3{font-size:18px;margin:0 0 14px;display:flex;align-items:center;gap:10px}.cat h3 small{font-size:12px;color:var(--mu);font-weight:400}
 .empty{color:var(--mu);font-size:14px;border:1px dashed var(--ln);border-radius:14px;padding:16px}
 .lb{position:fixed;inset:0;background:#000d;z-index:50;display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}.lb.on{display:flex}.lb img{max-height:92vh;border-radius:10px}
-/* จอ < 551px: แกลเลอรี่/ผลงานแสดง 3 คอลัมน์ รูปเล็กพอดีจอ */
-@media(max-width:550px){.gal{columns:3;column-gap:8px}.gal button{margin-bottom:8px;border-radius:10px}.gal span{padding:5px 7px;font-size:10px;line-height:1.35}.tabs{gap:6px;margin-bottom:20px}.tabs button{padding:6px 12px;font-size:12px}.cat h3{font-size:16px}}
+/* จอ < 551px: แกลเลอรี่/ผลงาน 3 คอลัมน์ ทุกรูปสัดส่วน 1:1 เท่ากัน แถวเรียงตรง */
+@media(max-width:550px){.gal{gap:8px;align-items:stretch}.gal button{display:flex;flex-direction:column;border-radius:10px}.gal button img{width:100%;aspect-ratio:1/1;object-fit:cover;flex:none}.gal span{flex:1}.gal span{padding:5px 7px;font-size:10px;line-height:1.35}.tabs{gap:6px;margin-bottom:20px}.tabs button{padding:6px 12px;font-size:12px}.cat h3{font-size:16px}}
 
 /* =====================================================================
    7) แผนที่ + ติดต่อ + footer
