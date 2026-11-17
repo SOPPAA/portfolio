@@ -13,11 +13,11 @@
    ===================================================================== */
 var WORKS=[
   /* หมวดหมู่ — ตัวอย่างเสื้อ */
-  {src:"images/work-01.jpg",title:"ชุดฟุตบอล PERWIRA · แขนสโลป",collar:"คอวี",style:"กีฬา"},
-  {src:"images/work-02.jpg",title:"เสื้อเพื่อนรวมทีม · แขนสโลป",collar:"คอปก",style:"กลุ่มเพื่อน"},
-  {src:"images/work-03.jpg",title:"เสื้อทีมธกส.ปัตตานี",collar:"คอปก",style:"องค์กร"},
-  {src:"images/work-04.jpg",title:"ทีมฟุตบอล กรมทหารราบที่ 153",collar:"คอกลม",style:"กีฬา"},
-  {src:"images/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม·แขนยาว",style:"แคมป์ปิ้ง"},
+  {src:"img-work/work-01.jpg",title:"ชุดฟุตบอล PERWIRA · แขนสโลป",collar:"คอวี",style:"กีฬา"},
+  {src:"img-work/work-02.jpg",title:"เสื้อเพื่อนรวมทีม · แขนสโลป",collar:"คอปก",style:"กลุ่มเพื่อน"},
+  {src:"img-work/work-03.jpg",title:"เสื้อทีมธกส.ปัตตานี",collar:"คอปก",style:"องค์กร"},
+  {src:"img-work/work-04.jpg",title:"ทีมฟุตบอล กรมทหารราบที่ 153",collar:"คอกลม",style:"กีฬา"},
+  {src:"img-work/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม·แขนยาว",style:"แคมป์ปิ้ง"},
   /* ===== ช่องสำรองสำหรับรูปใหม่ work-06 ถึง work-30 (ปิดคอมเมนต์ไว้ก่อน) =====
      เมื่อรูปพร้อม: ลบ // หน้าบรรทัดนั้น แล้วใส่ title / collar / style ให้ครบ */
   {src:"img-work/work-06.jpg",title:" ",collar:"คอปก",style:"คอปก"},
