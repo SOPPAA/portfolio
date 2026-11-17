@@ -20,7 +20,7 @@ var WORKS=[
   {src:"images/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม·แขนยาว",style:"แคมป์ปิ้ง"},
   /* ===== ช่องสำรองสำหรับรูปใหม่ work-06 ถึง work-30 (ปิดคอมเมนต์ไว้ก่อน) =====
      เมื่อรูปพร้อม: ลบ // หน้าบรรทัดนั้น แล้วใส่ title / collar / style ให้ครบ */
-  {src:"images/img-work/work-06.jpg",title:" ",collar:" ",style:" "},
+  {src:"images/img-work/work-06.jpg",title:" ",collar:"คอปก",style:"กลุ่มเพื่อน"},
   // {src:"images/work-07.jpg",title:" ",collar:" ",style:" "},
   // {src:"images/work-08.jpg",title:" ",collar:" ",style:" "},
   // {src:"images/work-09.jpg",title:" ",collar:" ",style:" "},
