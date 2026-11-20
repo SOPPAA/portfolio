@@ -21,11 +21,11 @@ var WORKS=[
   {src:"img-work/work-02.jpg",title:"เสื้อเพื่อนรวมทีม · แขนสโลป",collar:"คอปก",style:"กลุ่มเพื่อน"},
   {src:"img-work/work-03.jpg",title:"เสื้อทีมธกส.ปัตตานี",collar:"คอปก",style:"องค์กร"},
   {src:"img-work/work-04.jpg",title:"ทีมฟุตบอล กรมทหารราบที่ 153",collar:"คอกลม",style:"กีฬา"},
-  {src:"img-work/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม·แขนยาว",style:"แคมป์ปิ้ง"},
+  {src:"img-work/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม",style:"แคมป์ปิ้ง"},
   /* ===== ช่องสำรองสำหรับรูปใหม่ work-06 ถึง work-30 (ปิดคอมเมนต์ไว้ก่อน) =====
      เมื่อรูปพร้อม: ลบ // หน้าบรรทัดนั้น แล้วใส่ title / collar / style ให้ครบ */
-  {src:"img-work/work-06.jpg",title:"Pattani Van Club",collar:"คอปก",style:"คอปก"},
-  {src:"img-work/work-07.jpg",title:"B'hang Van U-turn",collar:"คอปก",style:"คอปก"},
+  {src:"img-work/work-06.jpg",title:"Pattani Van Club",collar:"คอปก",style:"กลุ่มเพื่อน"},
+  {src:"img-work/work-07.jpg",title:"B'hang Van U-turn",collar:"คอปก",style:"กลุ่มเพื่อน"},
   {src:"img-work/work-08.jpg",title:"Penjana Cup",collar:"คอวีปก",style:"กีฬา"},
   {src:"img-work/work-09.jpg",title:"Penjana Cup",collar:"คอวี Muslimah",style:"กีฬา"},
   {src:"img-work/work-10.jpg",title:"Pustaka Meang · แขนสโลป",collar:"คอวี",style:"กีฬา"},
