@@ -11,8 +11,6 @@
    - 6 รูปแรกของรายการนี้จะแสดงในส่วน "ตัวอย่างผลงาน" หน้าแรก
    - อย่าลืมเครื่องหมายจุลภาค (,) ท้ายทุกบรรทัด และเปิด-ปิดเครื่องหมายคำพูด " ให้ครบ
    
-  COLLARS:["คอกลม","คอวี","คอปก","คอจีน","คอปกวินเทจ","คอวีปก","คอวี Muslimah","อื่นๆ"],
-  STYLES:["กึ่งทางการ","กีฬา","วินเทจ","มลายู","อิสลามิก","แคมป์ปิ้ง","ธง / ป้ายผ้า","กลุ่มเพื่อน","องค์กร"],
    ===================================================================== */
 
 var WORKS=[
@@ -22,8 +20,6 @@ var WORKS=[
   {src:"img-work/work-03.jpg",title:"เสื้อทีมธกส.ปัตตานี",collar:"คอปก",style:"องค์กร"},
   {src:"img-work/work-04.jpg",title:"ทีมฟุตบอล กรมทหารราบที่ 153",collar:"คอกลม",style:"กีฬา"},
   {src:"img-work/work-05.jpg",title:"Cinta ilmu Camping",collar:"คอกลม",style:"แคมป์ปิ้ง"},
-  /* ===== ช่องสำรองสำหรับรูปใหม่ work-06 ถึง work-30 (ปิดคอมเมนต์ไว้ก่อน) =====
-     เมื่อรูปพร้อม: ลบ // หน้าบรรทัดนั้น แล้วใส่ title / collar / style ให้ครบ */
   {src:"img-work/work-06.jpg",title:"Pattani Van Club",collar:"คอปก",style:"กลุ่มเพื่อน"},
   {src:"img-work/work-07.jpg",title:"B'hang Van U-turn",collar:"คอปก",style:"กลุ่มเพื่อน"},
   {src:"img-work/work-08.jpg",title:"Penjana Cup",collar:"คอวีปก",style:"กีฬา"},
@@ -31,24 +27,24 @@ var WORKS=[
   {src:"img-work/work-10.jpg",title:"Pustaka Meang · แขนสโลป",collar:"คอวี",style:"กีฬา"},
   {src:"img-work/work-11.jpg",title:"Printam/2026",collar:"คอปก",style:"อิสลามิก"},
   {src:"img-work/work-12.jpg",title:"Cinta alam",collar:"คอกลม",style:"แคมป์ปิ้ง"},
-  {src:"img-work/work-13.jpg",title:"Sukan Pemuda",collar:"คอวีปก",style:"Team set"},
-  // {src:"images/work-14.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-15.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-16.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-17.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-18.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-19.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-20.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-21.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-22.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-23.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-24.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-25.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-26.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-27.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-28.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-29.jpg",title:" ",collar:" ",style:" "},
-  // {src:"images/work-30.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-13.jpg",title:"Sukan Pemuda",collar:"อื่นๆ",style:"Team set"},
+  {src:"img-work/work-14.jpg",title:"ส.ร.บาร์เบอร์",collar:"คอปก",style:"กลุ่มเพื่อน"},
+  {src:"img-work/work-15.png",title:"Maal Hijrah",collar:"อื่นๆ",style:"Team set"},
+  {src:"img-work/work-16.jpg",title:"Mochsi Cha",collar:"คอวี",style:"ทีมงาน"},
+  {src:"img-work/work-17.png",title:"Sukan Tadika",collar:"อื่นๆ",style:"Team set"},
+  {src:"img-work/work-18.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-19.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-20.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-21.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-22.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-23.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-24.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-25.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-26.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-27.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-28.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-29.jpg",title:" ",collar:" ",style:" "},
+  {src:"img-work/work-30.jpg",title:" ",collar:" ",style:" "},
   /* หมวดหมู่ — ชนิดผ้า */
   {src:"images/fabrics/1-01.jpg",title:"ผ้าไมโครเรียบ",fabric:"ไมโครเรียบ"},
   {src:"images/fabrics/1-02.jpg",title:"ผ้าเม็ดข้าวโพด",fabric:"เม็ดข้าวโพด"},
