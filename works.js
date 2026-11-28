@@ -2,9 +2,9 @@
    works.js — รายการรูปผลงาน / ผ้า (ไฟล์นี้ไฟล์เดียวที่ต้องแก้เมื่อเพิ่มรูป)
 
    วิธีเพิ่มรูปใหม่
-   1) วางไฟล์รูปในโฟลเดอร์ images/ (รูปผ้าอยู่ใน images/fabrics/)
+   1) วางไฟล์รูปผลงานในโฟลเดอร์ img-work/ (รูปผ้าอยู่ใน images/fabrics/)
    2) เพิ่ม 1 บรรทัดด้านล่าง รูปแบบ:
-        {src:"images/ชื่อไฟล์.jpg",title:"ชื่อที่แสดงใต้รูป",collar:"คอวี",style:"กีฬา"},
+        {src:"img-work/ชื่อไฟล์.jpg",title:"ชื่อที่แสดงใต้รูป",collar:"คอวี",style:"กีฬา"},
    - collar / style / fabric ใส่ข้อความเดียว หรือหลายค่าเช่น ["คอกลม","คอวี"] ก็ได้
    - ไม่ใส่ก็ได้ — รูปจะไม่ขึ้นในหมวดนั้น
    - ชื่อหมวดต้องตรงกับ CONFIG.COLLARS / STYLES / FABRICS ใน index.html
@@ -32,16 +32,16 @@ var WORKS=[
   {src:"img-work/work-15.png",title:"Maal Hijrah",collar:"อื่นๆ",style:"Team set"},
   {src:"img-work/work-16.jpg",title:"Mochsi Cha",collar:"คอวี",style:"ทีมงาน"},
   {src:"img-work/work-17.png",title:"Sukan Tadika",collar:"อื่นๆ",style:"Team set"},
+  {src:"img-work/work-18.jpg",title:"ตาดีกา Nurul Hadi (บือติงฮาญีแม)",collar:"คอวี",style:["กีฬา","อิสลามิก"]},
+  {src:"img-work/work-19.jpg",title:"Sahabat ku · แขนยาว",collar:"คอกลม",style:["แคมป์ปิ้ง","กลุ่มเพื่อน"]},
+  {src:"img-work/work-20.jpg",title:"Casino X 05",collar:"คอวีปก",style:"กีฬา"},
+  {src:"img-work/work-21.jpg",title:"Kerija Halal · ทำงานเพื่อครอบครัว",collar:"คอวี",style:"ทีมงาน"},
+  {src:"img-work/work-22.jpg",title:"วิทยาลัยเทคนิคปัตตานี (อิเล็กทรอนิกส์)",collar:"คอปก",style:"องค์กร"},
+  {src:"img-work/work-23.jpg",title:"โรงเรียนอารยธรรมศาสน์ (ATS)",collar:"คอปก",style:["องค์กร","กึ่งทางการ"]},
+  {src:"img-work/work-24.jpg",title:"Tadika Tadribatul Atfal",collar:"คอกลม",style:"อิสลามิก"},
+  {src:"img-work/work-25.jpg",title:"กางเกงพละ โรงเรียนบ้านดอนรัก",collar:"อื่นๆ",style:"องค์กร"},
+  {src:"img-work/work-26.jpg",title:"โรงเรียนบ้านดอนรัก · แขนยาว",collar:"คอปก",style:["องค์กร","กึ่งทางการ"]},
   /* ตัวอย่างรายการรอเพิ่มรูป (เอา // ออกเมื่อใส่รูปและข้อมูลแล้ว)
-  {src:"img-work/work-18.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-19.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-20.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-21.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-22.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-23.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-24.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-25.jpg",title:"",collar:"",style:""},
-  {src:"img-work/work-26.jpg",title:"",collar:"",style:""},
   {src:"img-work/work-27.jpg",title:"",collar:"",style:""},
   {src:"img-work/work-28.jpg",title:"",collar:"",style:""},
   {src:"img-work/work-29.jpg",title:"",collar:"",style:""},
